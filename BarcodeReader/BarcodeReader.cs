@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using ZXing;
 using ZXing.Common;
 
-namespace BarcodeReader
+namespace speyck.BarcodeReader
 {
     /*
         *  Needed Nuget Libraries:

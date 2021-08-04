@@ -7,8 +7,8 @@
     <ProjectGuid>{19247D06-B79D-4EA4-9836-B20E429CA43C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BarcodeReader</RootNamespace>
-    <AssemblyName>BarcodeReader</AssemblyName>
+    <RootNamespace>speyck.BarcodeReader</RootNamespace>
+    <AssemblyName>speyck.BarcodeReader</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

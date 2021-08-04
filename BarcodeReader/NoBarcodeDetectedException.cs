@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 
-namespace BarcodeReader
+namespace speyck.BarcodeReader
 {
     /// <summary>
     /// Exception for when the Decode() method has a error/exception

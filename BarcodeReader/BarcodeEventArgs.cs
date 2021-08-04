@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 
-namespace BarcodeReader
+namespace speyck.BarcodeReader
 {
     /// <summary>
     /// EventArgs for BarcodeDetectedEvents but also other events using Barcodes
