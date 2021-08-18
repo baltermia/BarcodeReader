@@ -3,6 +3,7 @@
 
 [![Nuget](https://img.shields.io/nuget/v/speyck.BarcodeReader)](https://www.nuget.org/packages/speyck.BarcodeReader/)
 [![BarcodeReader](https://img.shields.io/nuget/dt/speyck.BarcodeReader.svg?style=flat-square)](https://www.nuget.org/packages/speyck.BarcodeReader/)
+[![CodeFactor](https://www.codefactor.io/repository/github/speyck/barcodereader/badge)](https://www.codefactor.io/repository/github/speyck/barcodereader)
 
 A .NET Framework library helping you to decode Barcodes.
   
