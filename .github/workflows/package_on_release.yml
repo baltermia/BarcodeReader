@@ -1,0 +1,41 @@
+name: Create packages
+
+on:
+  release:
+  workflow_dispatch:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Setup
+        uses: actions/setup-dotnet@v1.5.0
+        with:
+          dotnet-version: 3.1.301
+          source-url: https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json
+        env:
+          NUGET_AUTH_TOKEN: '%NUGET_AUTH_TOKEN%' 
+          
+      - name: Restore dependencies
+        run: dotnet restore
+        
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
+        
+      - name: Test
+        run: dotnet test --no-build --verbosity normal
+
+      - name: Pack
+        run: dotnet pack --no-build --configuration Release BarcodeReader/BarcodeReader.csproj --output .
+        
+      - name: Push NuGet
+        run: dotnet nuget push *.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_API_KEY }} --skip-duplicate
+        
+      - name: Push GitHub
+        run: dotnet nuget push *.nupkg --no-symbols --skip-duplicate
+        env:
+          NUGET_AUTH_TOKEN: ${{ github.token }}
