@@ -1,5 +1,7 @@
 name: dotNet Framework Build
 
+description: dotNet Framework Build
+
 on: [ push ]
 
 jobs:
