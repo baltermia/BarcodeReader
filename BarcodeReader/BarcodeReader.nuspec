@@ -2,8 +2,8 @@
 <package >
   <metadata>
     <id>speyck.BarcodeReader</id>
-    <version>1.1.0</version>
-    <title>seyck.BarcodeReader</title>
+    <version>1.1.1</version>
+    <title>speyck.BarcodeReader</title>
     <authors>speyck</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>BarcodeReader is a facade of the ZXing.Net library and allows you to decode images containing Barcodes.</description>
