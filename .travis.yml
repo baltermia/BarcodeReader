@@ -1,6 +1,6 @@
 language: csharp
 solution: BarcodeReader.sln
-
+dotnet: 2.1.502
 install:
   - nuget restore BarcodeReader.sln
 script:
