@@ -4,5 +4,5 @@ install:
   - nuget restore BarcodeReader.sln
   - nuget install NUnit.Console -Version 3.9.0 -OutputDirectory testrunner
 script:
-  - msbuild /p:Configuration=Release BarcodeReader.sln
-  - mono ./testrunner/NUnit.ConsoleRunner.3.9.0/tools/nunit3-console.exe ./BarcodeReader/bin/Release/BarcodeReader.dll
+  - msbuild /p:Configuration=Debug BarcodeReader.sln
+  - mono ./testrunner/NUnit.ConsoleRunner.3.9.0/tools/nunit3-console.exe ./BarcodeReader/bin/Debug/BarcodeReader.dll
