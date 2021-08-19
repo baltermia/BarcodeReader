@@ -1,16 +1,8 @@
 language: csharp
 solution: BarcodeReader.sln
 
-# Codecov
-before_install:
-  - pip install --user codecov
-after_success:
-  - codecov --file coverage/lcov.info --disable search
-
-# Travis CI
 install:
   - nuget restore BarcodeReader.sln
-  - nuget install NUnit.Console -Version 3.9.0 -OutputDirectory testrunner
 script:
-  - msbuild /p:Configuration=Debug BarcodeReader.sln
-  - mono ./testrunner/NUnit.ConsoleRunner.3.9.0/tools/nunit3-console.exe ./BarcodeReader/bin/Debug/netcoreapp3.1/BarcodeReader.dll
+  - dotnet build --no-restore
+  - dotnet test --no-build --verbosity normal 
