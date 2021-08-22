@@ -1,13 +1,13 @@
 language: csharp
 solution: BarcodeReader.sln
+services:
+  - docker
 dotnet: 3.1
 install:
   - nuget restore BarcodeReader.sln
 script:
   - dotnet build --no-restore
   - dotnet test --no-build --verbosity normal 
-  # Dependency scanning with Snyk
-  # add Snyk API token as environment variable SNYK_TOKEN
   - curl -Lo ./snyk $(curl -s https://api.github.com/repos/snyk/snyk/releases/latest | grep "browser_download_url.*snyk-linux\"" | cut -d ':' -f 2,3 | tr -d \" | tr -d ' ')
   - chmod +x snyk
   - ./snyk test --all-projects
