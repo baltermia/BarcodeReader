@@ -10,5 +10,6 @@ script:
   - dotnet test --no-build --verbosity normal 
   - curl -Lo ./snyk $(curl -s https://api.github.com/repos/snyk/snyk/releases/latest | grep "browser_download_url.*snyk-linux\"" | cut -d ':' -f 2,3 | tr -d \" | tr -d ' ')
   - chmod +x snyk
+  - snyk auth
   - ./snyk test --all-projects
   - ./snyk monitor --all-projects
