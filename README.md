@@ -6,7 +6,7 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/speyck/BarcodeReader/badge?style=flat-square)](https://www.codefactor.io/repository/github/speyck/barcodereader)
 [![Build Status](https://img.shields.io/travis/speyck/BarcodeReader.svg?branch=main&style=flat-square)](https://app.travis-ci.com/speyck/BarcodeReader)
 [![Code Climate](https://img.shields.io/codeclimate/maintainability/speyck/BarcodeReader?style=flat-square)](https://codeclimate.com/github/speyck/BarcodeReader)
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/speyck/BarcodeReader.svg?logo=lgtm&logoWidth=18?style=flat-square)](https://lgtm.com/projects/g/speyck/BarcodeReader/alerts/)
+[![Total alerts](https://img.shields.io/lgtm/alerts/github/speyck/BarcodeReader?style=flat-square)](https://lgtm.com/projects/g/speyck/BarcodeReader/alerts/)
   
 A .NET Core library helping you to decode Barcodes.
   
