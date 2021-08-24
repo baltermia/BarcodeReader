@@ -146,45 +146,7 @@ namespace speyck.BarcodeReader
             }
         }
 
-        public Task<bool> DecodeAsync(Bitmap bmp)
-        {
-            return Task.Run(() =>
-            {
-                try
-                {
-                    readerTask = Task.Run(() =>
-                    {
-                        using (bmp)
-                        {
-                            Image = bmp;
-
-                            Result result = reader.Decode(bmp);
-
-                            FoundValue = result?.Text;
-
-                            if (Successful = result != null)
-                            {
-                                DetectedBarcode(this, new BarcodeEventArgs(FoundValue, bmp));
-                            }
-                            else
-                            {
-                                Error = new NoBarcodeDetectedException("The provided bitmap did not contain a readable barcode.", bmp);
-                            }
-                        }
-                    });
-
-                    return Successful;
-                }
-                catch (Exception ex)
-                {
-                    bmp?.Dispose();
-
-                    Error = ex;
-
-                    return false;
-                }
-            });
-        }
+        public Task<bool> DecodeAsync(Bitmap bmp) => Task.Run(() => Decode(bmp));
 
         /// <summary>
         /// Stops decoding and releases any managed/unmanaged memory the class uses
